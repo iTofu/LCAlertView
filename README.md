@@ -8,6 +8,7 @@
 
 🍭 Using UIAlertView with Block!
 
+![LCAlertView](https://raw.githubusercontent.com/iTofu/LCAlertView/master/LCAlertView01.PNG)
 
 ````
 In me the tiger sniffs the rose.
@@ -58,6 +59,51 @@ Just drag the LCAlertView folder into your project.
 
   [alertView show];
   ````
+
+* You could also using properties:
+
+  ````objc
+  LCAlertView *alertView = [[LCAlertView alloc] initWithTitle:@"LCAlertView" message:@"Block Properties" delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"1", @"2", @"3", nil];
+
+  alertView.clickedButtonAtIndexBlock = ^(LCAlertView *alertView, NSInteger buttonIndex) {
+      NSLog(@"clickedButtonAtIndex: %d", (int)buttonIndex);
+  };
+
+  alertView.cancelBlock = ^(LCAlertView *alertView) {
+      NSLog(@"cancel");
+  };
+
+  // You should set `willPresentAlertViewBlock` before `- (void)show;`
+  // 设置 willPresentAlertViewBlock 一定要放在 `- (void)show;`方法之前
+  alertView.willPresentAlertViewBlock = ^(LCAlertView *alertView) {
+      NSLog(@"willPresentAlertView");
+  };
+
+  alertView.didPresentAlertViewBlock = ^(LCAlertView *alertView) {
+      NSLog(@"didPresentAlertView");
+  };
+
+  alertView.willDismissWithButtonIndexBlock = ^(LCAlertView *alertView, NSInteger buttonIndex) {
+      NSLog(@"willDismissWithButtonIndexBlock: %d", (int)buttonIndex);
+  };
+
+  alertView.didDismissWithButtonIndexBlock = ^(LCAlertView *alertView, NSInteger buttonIndex) {
+      NSLog(@"didDismissWithButtonIndex: %d", (int)buttonIndex);
+  };
+
+  [alertView show];
+  ````
+
+
+
+## Example
+
+![LCAlertView](https://raw.githubusercontent.com/iTofu/LCAlertView/master/LCAlertView02.PNG)
+---
+![LCAlertView](https://raw.githubusercontent.com/iTofu/LCAlertView/master/LCAlertView03.PNG)
+---
+![LCAlertView](https://raw.githubusercontent.com/iTofu/LCAlertView/master/LCAlertView04.PNG)
+
 
 
 ## Release

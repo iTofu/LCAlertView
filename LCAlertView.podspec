@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "LCAlertView"
+  s.name         = "LCAlertView-ObjC"
   s.version      = "1.0.0"
   s.summary      = "Using UIAlertView with Block! Support: http://LeoDev.me"
   s.homepage     = "https://github.com/iTofu/LCAlertView"
