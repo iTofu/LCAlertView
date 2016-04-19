@@ -6,7 +6,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/p/LCAlertView-ObjC.svg)](http://cocoadocs.org/docsets/LCAlertView-ObjC)
 [![LeoDev](https://img.shields.io/badge/blog-LeoDev.me-brightgreen.svg)](http://leodev.me)
 
-🍭 UIAlertView with Block!
+🍭 Using UIAlertView with Block!
 
 
 ````
@@ -15,13 +15,14 @@ In me the tiger sniffs the rose.
 心有猛虎，细嗅蔷薇。
 ````
 
-Welcome to visit my blog: <http://LeoDev.me> ✨
+Welcome to **[My Blog](http://LeoDev.me)**: http://LeoDev.me ✨
 
 [**中文介绍**](https://github.com/iTofu/LCAlertView/blob/master/README-zh_CN.md)
 
 
 
 ## Introduction
+
 
 
 ## Installation
@@ -50,6 +51,13 @@ Just drag the LCAlertView folder into your project.
 
 * Demo code:
 
+  ````objc
+  LCAlertView *alertView = [[LCAlertView alloc] initWithTitle:@"LCAlertView" message:@"Quick Method" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"1", @"2", @"3"] clickedButtonAtIndex:^(LCAlertView *alertView, NSInteger buttonIndex) {
+      NSLog(@"clickedButtonAtIndex: %d", (int)buttonIndex);
+  }];
+
+  [alertView show];
+  ````
 
 
 ## Release
@@ -62,7 +70,7 @@ Just drag the LCAlertView folder into your project.
 
 ## Support
 
-* If you have any questions, please [commit a issure](https://github.com/LeoGod/LCAlertView/issues/new)! Thx!
+* If you have any questions, please [commit a issue](https://github.com/LeoGod/LCAlertView/issues/new)! Thx!
 * Mail: devtip@163.com
 * Blog: http://LeoDev.me
 
