@@ -24,6 +24,10 @@ Welcome to **[My Blog](http://LeoDev.me)**: http://LeoDev.me ✨
 
 ## Introduction
 
+Now you could using UIAlertView with Block!
+
+Fascinating? Yeah! So, just star this project now! ⭐️
+
 
 
 ## Installation
@@ -110,14 +114,16 @@ Just drag the LCAlertView folder into your project.
 
 ### V 1.0.0
 
-* Initial commit, first release!
+* Initial Commit! First Release! Wonderful Start!
 
 
 
 ## Support
 
-* If you have any questions, please [commit a issue](https://github.com/LeoGod/LCAlertView/issues/new)! Thx!
+* If you have any question, just [commit a issue](https://github.com/LeoGod/LCAlertView/issues/new)! Thx!
+
 * Mail: devtip@163.com
+
 * Blog: http://LeoDev.me
 
 
