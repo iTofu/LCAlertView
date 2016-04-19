@@ -22,6 +22,10 @@ In me the tiger sniffs the rose.
 国人都很聪明，害要啥 README！
 ````
 
+````ruby
+pod "LCAlertView-ObjC"  # Podfile
+````
+
 * Mail: devtip@163.com
 * Blog: http://LeoDev.me
 
