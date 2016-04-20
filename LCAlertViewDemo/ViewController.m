@@ -84,7 +84,11 @@
  *  Quick Method
  */
 - (void)btn2Clicked {
-    LCAlertView *alertView = [[LCAlertView alloc] initWithTitle:@"LCAlertView" message:@"Quick Method" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"1", @"2", @"3"] clickedButtonAtIndex:^(LCAlertView *alertView, NSInteger buttonIndex) {
+//    LCAlertView *alertView = [[LCAlertView alloc] initWithTitle:@"LCAlertView" message:@"Quick Method" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"1", @"2", @"3"] clickedButtonAtIndex:^(LCAlertView *alertView, NSInteger buttonIndex) {
+//        NSLog(@"clickedButtonAtIndex: %d", (int)buttonIndex);
+//    }];
+    
+    LCAlertView *alertView = [LCAlertView title:@"LCAlertView" message:@"Quick Method" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"1", @"2"] clickedButtonAtIndex:^(LCAlertView *alertView, NSInteger buttonIndex) {
         NSLog(@"clickedButtonAtIndex: %d", (int)buttonIndex);
     }];
     

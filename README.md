@@ -57,10 +57,17 @@ Just drag the LCAlertView folder into your project.
 * Demo code:
 
   ````objc
+  // 1. Class method
+  LCAlertView *alertView = [LCAlertView title:@"LCAlertView" message:@"Quick Method" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"1", @"2"] clickedButtonAtIndex:^(LCAlertView *alertView, NSInteger buttonIndex) {
+      NSLog(@"clickedButtonAtIndex: %d", (int)buttonIndex);
+  }];
+
+  // 2. Instance method
   LCAlertView *alertView = [[LCAlertView alloc] initWithTitle:@"LCAlertView" message:@"Quick Method" cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"1", @"2", @"3"] clickedButtonAtIndex:^(LCAlertView *alertView, NSInteger buttonIndex) {
       NSLog(@"clickedButtonAtIndex: %d", (int)buttonIndex);
   }];
 
+  // show alertView
   [alertView show];
   ````
 
@@ -111,6 +118,11 @@ Just drag the LCAlertView folder into your project.
 
 
 ## Release
+
+### V 1.0.1
+
+* Add some quick class methods.
+
 
 ### V 1.0.0
 

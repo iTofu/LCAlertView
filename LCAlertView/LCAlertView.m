@@ -48,6 +48,14 @@
     return self;
 }
 
++ (instancetype)title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles clickedButtonAtIndex:(ClickedButtonAtIndexBlock)clickedButtonAtIndexBlock {
+    return [[self alloc] initWithTitle:title message:message cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles clickedButtonAtIndex:clickedButtonAtIndexBlock];
+}
+
++ (instancetype)title:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles didDismissWithButtonIndex:(DidDismissWithButtonIndexBlock)didDismissWithButtonIndexBlock {
+    return [[self alloc] initWithTitle:title message:message cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles didDismissWithButtonIndex:didDismissWithButtonIndexBlock];
+}
+
 - (instancetype)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles clickedButtonAtIndex:(ClickedButtonAtIndexBlock)clickedButtonAtIndexBlock {
     if (self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil]) {
         self.clickedButtonAtIndexBlock = clickedButtonAtIndexBlock;

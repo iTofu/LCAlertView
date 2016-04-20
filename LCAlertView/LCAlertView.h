@@ -8,7 +8,7 @@
 //  Mail: mailto:devtip@163.com
 //  Blog: http://LeoDev.me
 //
-//  V 1.0.0
+//  V 1.0.1
 
 
 #import <UIKit/UIKit.h>
@@ -43,8 +43,47 @@ typedef BOOL (^ShouldEnableFirstOtherButtonBlock)(LCAlertView *alertView);
 
 #pragma mark - Quick Methods
 
+#pragma mark Class Methods
+
 /**
- *  Initialize an alert view
+ *  Initialize an alert view with `clickedButtonAtIndexBlock`.
+ *
+ *  @param title                     title
+ *  @param message                   message
+ *  @param cancelButtonTitle         cancelButtonTitle
+ *  @param otherButtonTitles         otherButtonTitles
+ *  @param clickedButtonAtIndexBlock clickedButtonAtIndexBlock
+ *
+ *  @return alert view
+ */
++ (instancetype)title:(NSString *)title
+              message:(NSString *)message
+    cancelButtonTitle:(NSString *)cancelButtonTitle
+    otherButtonTitles:(NSArray *)otherButtonTitles
+ clickedButtonAtIndex:(ClickedButtonAtIndexBlock)clickedButtonAtIndexBlock;
+
+/**
+ *  Initialize an alert view with `didDismissWithButtonIndexBlock`.
+ *
+ *  @param title                     title
+ *  @param message                   message
+ *  @param cancelButtonTitle         cancelButtonTitle
+ *  @param otherButtonTitles         otherButtonTitles
+ *  @param didDismissWithButtonIndexBlock didDismissWithButtonIndexBlock
+ *
+ *  @return alert view
+ */
++ (instancetype)title:(NSString *)title
+              message:(NSString *)message
+    cancelButtonTitle:(NSString *)cancelButtonTitle
+    otherButtonTitles:(NSArray *)otherButtonTitles
+didDismissWithButtonIndex:(DidDismissWithButtonIndexBlock)didDismissWithButtonIndexBlock;
+
+
+#pragma mark Instance Methods
+
+/**
+ *  Initialize an alert view with `clickedButtonAtIndexBlock`.
  *
  *  @param title                     title
  *  @param message                   message
@@ -61,7 +100,7 @@ typedef BOOL (^ShouldEnableFirstOtherButtonBlock)(LCAlertView *alertView);
          clickedButtonAtIndex:(ClickedButtonAtIndexBlock)clickedButtonAtIndexBlock;
 
 /**
- *  Initialize an alert view
+ *  Initialize an alert view with `didDismissWithButtonIndexBlock`.
  *
  *  @param title                     title
  *  @param message                   message
