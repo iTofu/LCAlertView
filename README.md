@@ -145,6 +145,6 @@ Just drag the LCAlertView folder into your project.
 
 
 
-### License
+## License
 
 [MIT License](http://opensource.org/licenses/MIT)
